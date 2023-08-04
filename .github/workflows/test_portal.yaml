@@ -12,4 +12,6 @@ jobs:
       - name: Test the PALINDROME portal
         run: | 
           C:\msys64\usr\bin\wget.exe '''${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
-          cat test
+          cat '''${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}'''
+          echo '''${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}'''
+          echo '''${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}''' >> test.log
