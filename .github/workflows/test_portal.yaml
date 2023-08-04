@@ -2,7 +2,7 @@ name: Test the PALINDROME portal
 
 on:
     issues:
-        types: [open]
+        types: [opened, edited, deleted, closed]
 
 jobs:
   test:
