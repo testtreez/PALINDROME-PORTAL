@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Merge to master
-        run: git checkout --progress --force ${{ github.sha }}
+      run: git checkout --progress --force ${{ github.sha }}
     - name: Say Hi
       run: |
         echo "h!!"
