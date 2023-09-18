@@ -1,15 +1,14 @@
 name: Test the PALINDROME portal
 
-on: [push, pull_request]
+on: pull_request_target
 
 jobs:
   test:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
-      
-      - name: Merge to master
-        run: git checkout --progress --force ${{ github.sha }}
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
         
       - name: Test the PALINDROME portal
         run: | 
